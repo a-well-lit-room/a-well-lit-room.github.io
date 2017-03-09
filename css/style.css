@@ -93,7 +93,7 @@ li.active a:visited, li a.active, li span.active, #index ul.section li.active a:
 .container { padding: 27px 9px 25px 27px; }
 
 /* this is where you pad them separately */
-#index .container {  }
+#index .container { position:fixed; }
 #exhibit .container {  }
 
 /*.exhibit_title { position: relative; overflow:auto; }*/
