@@ -21,7 +21,7 @@ body {
 a:link { text-decoration: none; color: #444; }
 a:active { text-decoration: none; color: #444; }
 a:visited { text-decoration: none; color: #444; }
-a:hover { text-decoration: underline; }
+a:hover { text-decoration: none; }
 a img { border: none; }
 
 /* general styles */
@@ -51,7 +51,7 @@ h4 { font-size: 13px; margin-bottom: 1em; }
 /* styling the index */
 #index ul { list-style: none; margin: 0; }
 #index ul.section { margin-bottom: 1em; }
-#index ul.subsection {  }
+#index ul.subsection { margin-bottom: 1em; }
 
 /* the follow rules for index are not required */
 /* they are mostly for complex customization */
