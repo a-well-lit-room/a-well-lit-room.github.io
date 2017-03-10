@@ -97,4 +97,4 @@ li.active a:visited, li a.active, li span.active, #index ul.section li.active a:
 #exhibit .container {  }
 
 /*.exhibit_title { position: relative; overflow:auto; }*/
-.exhibit_title { padding-bottom: 5px; }
+.exhibit_title { padding-bottom: 50px; }
