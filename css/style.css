@@ -25,7 +25,7 @@ a:hover { text-decoration: none; }
 a img { border: none; }
 
 /* general styles */
-large { font-size: 14px }
+large { font-size: 14px; margin-bottom: 2em; }
 small { font-size: 12px; }
 code { font-family: monospace; }
 blockquote { padding-left: 9px; }
@@ -97,4 +97,4 @@ li.active a:visited, li a.active, li span.active, #index ul.section li.active a:
 #exhibit .container {  }
 
 /*.exhibit_title { position: relative; overflow:auto; }*/
-.exhibit_title { padding-bottom: 50px; }
+.exhibit_title { padding-bottom: 1em; }
