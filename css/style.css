@@ -98,3 +98,6 @@ li.active a:visited, li a.active, li span.active, #index ul.section li.active a:
 
 /*.exhibit_title { position: relative; overflow:auto; }*/
 .exhibit_title { padding-bottom: 1em; }
+
+/* photo padding */
+.picture { margin-bottom: 3em; }
