@@ -50,8 +50,8 @@ h4 { font-size: 13px; margin-bottom: 1em; }
 
 /* styling the index */
 #index ul { list-style: none; margin: 0; }
-#index ul.section { margin-bottom: 2em; }
-#index ul.subsection { margin-bottom: 2em; }
+#index ul.section { margin-bottom: 3em; }
+#index ul.subsection { margin-bottom: 3em; }
 
 /* the follow rules for index are not required */
 /* they are mostly for complex customization */
@@ -101,4 +101,5 @@ li.active a:visited, li a.active, li span.active, #index ul.section li.active a:
 .section {  }
 
 /* photo padding */
-.picture { margin-bottom: 3em; }
+#exhibit .picture { margin-bottom: 3em; }
+
