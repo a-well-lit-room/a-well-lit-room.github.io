@@ -31,7 +31,10 @@ blockquote { padding-left: 9px; }
 	margin: 0 0 0 230px;
 	position: relative;
 }
-#bio { margin: 0 0 0 215px; }
+#bio {
+	margin: 0 0 0 230px;
+	position: absolute;
+}
 
 /* styling the nav */
 #nav ul { list-style: none; margin: 0; }
@@ -53,6 +56,10 @@ blockquote { padding-left: 9px; }
 	position: absolute;
 	padding-left: 15px;
 }
+#bio .container {
+	position: absolute;
+	padding-left: 15px;
+}
 .gallery {
 	height: auto;
 }
@@ -67,8 +74,12 @@ blockquote { padding-left: 9px; }
 	margin-bottom: 2em;
 }
 
+#tall {
+	max-height: 90vh;
+}
+
 .video {
-	height: 65vh;
+	height: 80vh;
 	min-width: 65vw;
 	margin-bottom: 2em;
 	position: relative;
