@@ -21,7 +21,7 @@
 <body>
 	<div id="sign">
 		<div class="container">
-			<p><a>Kaelan Burkett</a></p>
+			<p><a onclick="navSummon()">Kaelan Burkett</a></p>
 		</div>
 	</div>
 	<div id="nav">
@@ -45,7 +45,7 @@
 	<div id="bio">
 		<div class="container">
 			<div id="tombstone">
-				<p><a>Kaelan Burkett</a> is a photographer and videographer specializing in documentation of art and architecture.</p>
+				<p><a onclick="navSummon()">Kaelan Burkett</a> is a photographer and videographer specializing in documentation of art and architecture.</p>
 			</div>
 			<div id="tombstone">
 				&nbsp;
@@ -75,6 +75,13 @@
 			</div>
 			</div>
 	</div>
+
+	<script>
+	function navSummon () {
+	  var nav = document.getElementById("nav");
+	  nav.style.display = nav.style.display == "flex" ? "none" : "flex";
+	}
+	</script>
 
 	<script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
