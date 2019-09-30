@@ -16,33 +16,65 @@
 </head>
 
 <body>
-  <div id="sign">
-    <div class="container">
-      <p><a onclick="navSummon()">Kaelan Burkett</a></p>
+  <div id="nav">
+    <div  class="container" id="directory" onclick="navSummon()">
+      <ul class="wing" id="entrance">
+          <div class="top"><large><strong><a href="/" title="Kaelan Burkett">Kaelan Burkett</a></strong></large></div>
+        </ul>
+
+
+        <ul class="wing" id="wing_index">
+          <li class="exhibit_title" id="exhibit_01">
+            <a href="/projects/architecture"><small>architecture</small></a>
+          </li>
+
+          <li class="exhibit_title" id="exhibit_02">
+            <a href="/projects/topographics"><small>new new topographics</small></a>
+          </li>
+
+          <li class="exhibit_title" id="exhibit_03">
+            <a href="/projects/manufactured"><small>manufactured</small></a>
+          </li>
+        </ul>
+
+
+        <ul class="wing" id="wing_index">
+          <li class="exhibit_title" id="exhibit_10">
+            <a href="/projects/MASS_MoCA"><small>MASS MoCA</small></a>
+          </li>
+
+          <li class="exhibit_title" id="exhibit_11">
+            <a href="/projects/The_Met"><small>The Metropolitan Museum of Art</small></a>
+          </li>
+
+          <li class="exhibit_title" id="exhibit_12">
+            <a href="/projects/UMass"><small>University of Massachusetts</small></a>
+          </li>
+
+          <li class="exhibit_title" id="exhibit_13">
+            <a href="/projects/Hampden"><small>Hampden Gallery</small></a>
+          </li>
+
+          <li class="exhibit_title" id="exhibit_14">
+            <a href="/projects/wedding"><small>wedding</small></a>
+          </li>
+        </ul>
+
+
+        <ul class="wing" id="info_desk">
+          <li class="exhibit_title" id="exhibit_00">
+            <a href="/about"><small>about</small></a>
+          </li>
+        </ul>
     </div>
-  </div>
+    <div style="width:100vw;height:100vh;" onclick="navSummon()"></div>
   </div>
 
-  <div id="nav" style="display:none;">
-		<div class="container">
-      <div id="directory">
-  			<p>photo:</p>
-  			<p><a href="">painting</a></p>
-  			<p><a href="">sculpture and installation</a></p>
-  			<p><a href="">performance</a></p>
-  			<p><a href="">architecture</a></p>
-  			<p>video:</p>
-  			<p><a href="">directing</a></p>
-  			<p><a href="">editing</a></p>
-  			<p><a href="">lighting design</a></p>
-  			<p>&nbsp;</p>
-  			<p><a href="">about</a></p>
-  			<p><a href="">select publications</a></p>
-    </div>
-		</div>
-	</div>
+<div id="signature">
+  <p>Kaelan Burkett</p>
+</div>
 
-  <div id="exhibit">
+  <div id="exhibit" style="max-width:100%; overflow:scroll;">
     <div class="container">
       <div class="gallery">
         <img class="picture" src="../img/MASS_MoCA/MASS_MoCA_000.jpg">
@@ -133,8 +165,10 @@
 <script>
 
 function navSummon () {
-  var nav = document.getElementById("nav");
-  nav.style.display = nav.style.display == "flex" ? "none" : "flex";
+  var directory = document.getElementById("directory");
+  var signature = document.getElementById("signature");
+  directory.style.display = directory.style.display == "none" ? "block" : "none";
+  signature.style.display = signature.style.display == "block" ? "none" : "block";
 }
 </script>
 <!--<script>
