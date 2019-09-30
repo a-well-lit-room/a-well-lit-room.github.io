@@ -1,83 +1,109 @@
-/** CSS */
+/* css */
 
 body {
 	font-size: 13px;
 	font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
 	background: #fdfdfd;
-	color: #000;
+	color: #242424;
 	line-height: 1.3em;
-	height:100vh
-	/* font-weight: 300; */
 }
 
-a:link { text-decoration: none; color: #444; }
-a:active { text-decoration: none; color: #444; }
-a:visited { text-decoration: none; color: #444; }
+/* universal text formatting */
+p { font-size: 24px; color: #242424; line-height: normal; letter-spacing: .9px; text-decoration: none; margin-bottom: 1em; }
+
+a:link { text-decoration: underline; color: #242424; }
+a:active { text-decoration: none; color: #242424; }
+a:visited { text-decoration: none; color: #242424; }
 a:hover { text-decoration: none; }
 a img { border: none; }
 
-large { font-size: 14px; margin-bottom: 2em; }
-small { font-size: 12px; }
-code { font-family: monospace; }
-blockquote { padding-left: 9px; }
+#exhibit p, code, blockquote { width: 450px; margin-bottom: 1em; }
 
-#nav p { margin-bottom: 1em; }
-#exhibit p, code, blockquote { width: 450px; margin-bottom: 1em; /* line-height: 1.3em; */ }
-
-/* never adjust the margin or padding here unless you seriously know what you are doing */
-/* think #index .container and #exhibit .container for only padding adjustments */
-#nav { width: 230px; background: #fdfdfd; /* line-height: 1.3em; */ }
 #exhibit {
-	margin: 0 0 0 230px;
+	width: 100vw;
 	position: relative;
+	max-width: 100%;
 }
-#bio {
-	margin: 0 0 0 230px;
-	position: absolute;
+
+#sign {
+	position: sticky;
+	width: 100vw;
+	z-index: 5;
+	top: 0;
+	background: #fdfdfd;
+	margin: 0 auto;
+}
+
+#nav {
+	width: 100vw;
+	height: auto;
+	z-index: 4;
+	position: fixed;
+	height: 100%;
 }
 
 /* styling the nav */
 #nav ul { list-style: none; margin: 0; }
 #nav ul.wing { margin-bottom: 3em; }
 #nav ul.subsection { margin-bottom: 3em; }
+#nav p { margin-bottom: 1em; }
 
-/* active section title */
-#nav span.active_section_title,
-#nav span.active_section_title a { font-weight: bold; }
-
-/* this is where you adjust your paddings for #index and #exhibit together */
+/* this is where you adjust your paddings for #sign, #nav, and #exhibits together */
 .container {
-	margin: 40px 15px 40px 40px;
+	padding: 20px;
+	/*width: 65vw;*/
 }
 
 /* this is where you pad them separately */
-#nav .container { position:fixed; }
+#nav .container {
+	width: 100%;
+	background: #fdfdfd;
+	overflow: scroll;
+	margin: 0 auto;
+	padding-top: 0;
+}
 #exhibit .container {
-	position: absolute;
-	padding-left: 15px;
+	padding-top: 0;
 }
 #bio .container {
-	position: absolute;
-	padding-left: 15px;
+	margin: 0 auto;
+}
+#sign .container {
 }
 .gallery {
+	width: 100%;
 	height: auto;
+	margin: 0 auto;
+	max-width: 750px;
 }
+#directory  {
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+/* sign and nav elements */
+#sign a {
+	text-decoration: underline;
+}
+#sign p {
+margin: 0 auto;
+	margin-bottom: 0;
+	max-width: 750px;
+}
+
+/* exhibit elements */
 
 .exhibit_title {
 	margin-bottom: 1em;
 }
-
-.picture {
-	max-height: 80vh;
-	max-width: 65vw;
+img {
+	/*max-height: 80vh;*/
+	width: 100%;
 	margin-bottom: 2em;
 }
-
 #tall {
 	max-height: 90vh;
 }
-
 .video {
 	height: 80vh;
 	min-width: 65vw;
@@ -85,47 +111,25 @@ blockquote { padding-left: 9px; }
 	position: relative;
 	z-index: 2;
 }
-
 iframe {
 	width: 100%;
 	height: 100%;
 }
-
 #tombstone {
 	margin-bottom: 2em;
 	position: relative;
 	z-index: 2;
 }
 #tombstone p {
-	color: #444;
+	color: #242424;
 	width: 100%;
 }
 #tombstone a {
-	/* font-weight: bold; */
 	text-decoration: underline;
 }
-
-/*.exhibit_title { position: relative; overflow:auto; }
-.wing { margin-bottom: 1em; } */
-
-/* carousel buttons */
-.button {
-	position:absolute; top:0px; z-index:1;
+#info_desk ul {
+	margin-bottom: 0;
 }
-
-#left-button {
-	left:0px; /*background-color:#d33; opacity:.5;*/ cursor:w-resize;*/
-}
-
-#right-button {
-	right:0px; /*background-color:#3dd; opacity:.5;*/ cursor:e-resize;
-}
-
-.container .button {
-	height: 100%;
-	width: 50%;
-}
-
-div .button {
-	padding:inherit;
+#exhibit_00 {
+	margin-bottom: 0;
 }
