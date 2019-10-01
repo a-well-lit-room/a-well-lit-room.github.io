@@ -26,7 +26,6 @@ a img { border: none; }
 }
 
 #sign {
-	position: sticky;
 	width: 100vw;
 	z-index: 5;
 	top: 0;
@@ -38,7 +37,6 @@ a img { border: none; }
 	width: 100vw;
 	height: auto;
 	z-index: 4;
-	position: fixed;
 	height: 100%;
 }
 
