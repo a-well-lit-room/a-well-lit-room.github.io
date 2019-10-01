@@ -1,128 +1,137 @@
-/**
-* CSS
-*
-* @version 2.0
-* @author Vaska
-*
-* There are also some obscure rules in base.css
-*/
+/* css */
 
 body {
 	font-size: 13px;
 	font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
 	background: #fdfdfd;
-	color: #000;
+	color: #242424;
 	line-height: 1.3em;
-	height:100vh
-	/* font-weight: 300; */
 }
 
-/* link scheme */
-/* you can customize links further down the page too */
-a:link { text-decoration: none; color: #444; }
-a:active { text-decoration: none; color: #444; }
-a:visited { text-decoration: none; color: #444; }
+/* universal text formatting */
+p { font-size: 24px; color: #242424; line-height: normal; letter-spacing: .9px; text-decoration: none; margin-bottom: 1em; }
+
+a:link { text-decoration: underline; color: #242424; }
+a:active { text-decoration: none; color: #242424; }
+a:visited { text-decoration: none; color: #242424; }
 a:hover { text-decoration: none; }
 a img { border: none; }
 
-/* general styles */
-large { font-size: 14px; margin-bottom: 2em; }
-small { font-size: 12px; }
-code { font-family: monospace; }
-blockquote { padding-left: 9px; }
+#exhibit p, code, blockquote { width: 450px; margin-bottom: 1em; }
 
-/* headings */
-h1 { font-size: 13px; margin-bottom: 1em; font-weight: bold; }
-h2 { font-size: 13px; margin-bottom: 1em; font-weight: bold; }
-h3 { font-size: 13px; margin-bottom: 1em; }
-h4 { font-size: 13px; margin-bottom: 1em; }
+#exhibit {
+	width: 100vw;
+	position: relative;
+	max-width: 100%;
+}
 
-/* paragraph width */
-#index p { margin-bottom: 1em; }
-#exhibit p, code, blockquote { width: 450px; margin-bottom: 1em; /* line-height: 1.3em; */ }
+#sign {
+	position: sticky;
+	width: 100vw;
+	z-index: 5;
+	top: 0;
+	background: #fdfdfd;
+	margin: 0 auto;
+}
 
-/* highlighter style - maybe you want to change colors? */
-.highlight { background: #ccff00; color: #000; }
+#nav {
+	width: 100vw;
+	height: auto;
+	z-index: 4;
+	position: fixed;
+	height: 100%;
+}
 
-/* never adjust the margin or padding here unless you seriously know what you are doing */
-/* think #index .container and #exhibit .container for only padding adjustments */
-#index { width: 215px; background: #fdfdfd; /* line-height: 1.3em; */ }
-#exhibit { margin: 0 0 0 215px; }
-#bio { margin: 0 0 0 215px; }
+/* styling the nav */
+#nav ul { list-style: none; margin: 0; }
+#nav ul.wing { margin-bottom: 3em; }
+#nav ul.subsection { margin-bottom: 3em; }
+#nav p { margin-bottom: 1em; }
 
-/* styling the index */
-#index ul { list-style: none; margin: 0; }
-#index ul.section { margin-bottom: 3em; }
-#index ul.subsection { margin-bottom: 3em; }
-
-/* the follow rules for index are not required */
-/* they are mostly for complex customization */
-/* for tag display */
-#index ul#all_tags { list-style-type: none; margin-bottom: 1em; }
-#index ul#all_tags li { display: inline; margin-right: 3px; }
-#index ul#all_tags li a {  }
-
-/* active section title */
-#index span.active_section_title,
-#index span.active_section_title a { font-weight: bold; }
-
-/* active exhibit title parts */
-li.active a:link, li a.active, li.active a:hover, li a.active, li.active a:active, li a.active,
-li.active a:visited, li a.active, li span.active, #index ul.section li.active a:link,
-#index ul.section li.active a:hover, #index ul.section li.active a:active, #index ul.section li.active a:visited
-{ font-weight: bold; }
-
-/* additional #index options */
-#index ul li .password a { /* background: url(../img/locked.gif) right center no-repeat; padding-right: 18px; */ }
-
-/* the "new" indicator */
-#index ul li sup { color: #0c0; font-weight: bold; text-transform: uppercase; font-size: 8px; vertical-align: top; }
-/* end styling for index */
-
-/* links styles only for the #index region */
-#index a:link {  }
-#index a:hover { text-decoration: none; }
-#index a:active {  }
-#index a:visited {  }
-
-/* links styles only for the #exhibit region */
-#exhibit a:link {  }
-#exhibit a:hover {  }
-#exhibit a:active {  }
-#exhibit a:visited {  }
-
-/* this is where you adjust your paddings for #index and #exhibit together */
-.container { margin: 40px 15px 40px 40px; }
+/* this is where you adjust your paddings for #sign, #nav, and #exhibits together */
+.container {
+	padding: 20px;
+	/*width: 65vw;*/
+}
 
 /* this is where you pad them separately */
-#index .container { position:fixed; }
-#exhibit .container { height:80vh; position:absolute; }
-
-/*.exhibit_title { position: relative; overflow:auto; }*/
-.exhibit_title { margin-bottom: 1em; }
-.section {  }
-
-/* photo padding */
-/*#exhibit .picture { margin-bottom: 3em; }*/
-
-/* carousel buttons*/
-.button {
-	position:absolute; top:0px; z-index:1;
+#nav .container {
+	width: 100%;
+	background: #fdfdfd;
+	overflow: scroll;
+	margin: 0 auto;
+	padding-top: 0;
+}
+#exhibit .container {
+	padding-top: 0;
+}
+#bio .container {
+	margin: 0 auto;
+	max-width: 750px;
+}
+#sign .container {
+}
+.gallery {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	max-width: 750px;
+}
+#directory  {
+	max-width: 750px;
+	margin: 0 auto;
+	margin-bottom: 100px;
 }
 
-#left-button {
-	left:0px; /*background-color:#d33; opacity:.5;*/ cursor:w-resize;*/
+/* sign and nav elements */
+#sign a {
+	text-decoration: underline;
+}
+#sign p {
+margin: 0 auto;
+	margin-bottom: 0;
+	max-width: 750px;
 }
 
-#right-button {
-	right:0px; /*background-color:#3dd; opacity:.5;*/ cursor:e-resize;
-}
+/* exhibit elements */
 
-.container .button {
-	height:inherit;
-	width:50%;
+.exhibit_title {
+	margin-bottom: 1em;
 }
-
-div .button {
-	padding:inherit;
+img {
+	/*max-height: 80vh;*/
+	width: 100%;
+	margin-bottom: 2em;
+}
+#tall {
+	max-height: 90vh;
+}
+.video {
+	height: 80vh;
+	min-width: 65vw;
+	margin-bottom: 2em;
+	position: relative;
+	z-index: 2;
+}
+iframe {
+	width: 100%;
+	height: 100%;
+}
+#tombstone {
+	margin-bottom: 2em;
+	position: relative;
+	z-index: 2;
+}
+#tombstone p {
+	color: #242424;
+	width: 100%;
+}
+#tombstone a {
+	text-decoration: underline;
+}
+#info_desk ul {
+	margin-bottom: 0;
+}
+#exhibit_00 {
+	margin-bottom: 0;
 }
