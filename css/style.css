@@ -80,6 +80,9 @@ a img { border: none; }
 	margin: 0 auto;
 	margin-bottom: 100px;
 }
+#pub {
+	padding-top: 20px;
+}
 
 /* sign and nav elements */
 #sign a {
