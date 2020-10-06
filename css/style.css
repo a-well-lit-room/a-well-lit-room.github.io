@@ -76,6 +76,7 @@ header a {
 	background: #fdfdfd;
 	margin: 0 auto;
 	padding: 20px;
+	padding-top: 30px;
 }
 #sign p {
 	margin: 0 auto;
@@ -94,7 +95,7 @@ nav a {
 /* images */
 img {
 	width: 100%;
-	margin-bottom: 2em;
+	margin-bottom: 20px;
 }
 
 /* video */
@@ -117,7 +118,7 @@ img {
 }
 .video {
 	height: 80vh;
-	margin-bottom: 2em;
+	margin-bottom: 20px;
 	position: relative;
 	z-index: 2;
 }
@@ -131,6 +132,7 @@ iframe {
 	margin: 0 auto;
 	max-width: 750px;
 	padding: 20px;
+	padding-top: 30px;
 }
 #pub {
 	padding-top: 20px;
