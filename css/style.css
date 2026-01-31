@@ -157,37 +157,45 @@ article p {
 
 /* portfolio page */
 .portfolio {
+	/* variables */
+	--x1-offset: -200px;
+	--y1-offset: 0px;
+	--x2-offset: 250px;
+	--y2-offset: 270px;
+
 	width: 100%;
-	max-width: 850px;
+	max-width: 750px;
 	margin: 0 auto;
+	padding: 20px;
 }
 .portfolio .text {
 	height: auto;
-	z-index: 4;
-	height: 100%;
+	/* z-index: 4; */
+	/* height: 100%; */
 	margin: 0 auto;
-	padding: 20px;
-	max-width: 750px;
+	padding: 20px 0;
 }
-.folio {
+.portfolio .folio {
 	display: block;
 	padding: 0 10px;
 	width: 90%;
 	position: relative;
-	height: 620px;
 }
-.folio .picture {
+.portfolio .folio .picture {
 	position: absolute;
 	width: 600px;
 	height: auto;
 }
 .folio .picture:nth-child(odd) {
-	left: 0px;
-
+	left: var(--x1-offset);
+	top: var(--y1-offset);
 }
-.folio .picture:nth-child(even) {
-	left: 500px;
-	top: 270px;
+.portfolio .folio .picture:nth-child(even) {
+	left: var(--x2-offset);
+	top: var(--y2-offset);
+}
+.portfolio .folio .picture:nth-child(3) {
+	top: calc(var(--y2-offset) * 2);
 }
 .portfolio li {
 	margin-bottom: 2em;
