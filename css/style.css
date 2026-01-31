@@ -1,20 +1,28 @@
 /* css */
 
+:root {
+	--bg-color: #fdfdfd;
+	--text-color: #242424;
+	--main-font-size: 24px;
+}
+
 body {
-	font-size: 24px;
+	font-size: var(--main-font-size);
 	font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
-	background: #fdfdfd;
-	color: #242424;
+	background: var(--bg-color);
+	color: var(--text-color);
 	line-height: 1.3em;
 }
 
 /* text formatting */
-h1 {
-	font-size: 24px;
-	color: #242424;
+h1, p, li {
+	font-size: var(--main-font-size);
+	color: var(--text-color);
 	line-height: normal;
 	letter-spacing: .9px;
 	text-decoration: none;
+}
+h1 {
 	margin: 0 auto;
 	margin-bottom: 0;
 	max-width: 750px;
@@ -23,31 +31,24 @@ h2 {
 	font-weight: 500;
 }
 p, li {
-	font-size: 24px;
-	color: #242424;
-	line-height: normal;
-	letter-spacing: .9px;
-	text-decoration: none;
 	margin-bottom: 1em;
-	}
+}
 a:link {
 	text-decoration: underline;
-	color: #242424;
+	color: var(--text-color);
 }
 a:active, a:visited, a:hover {
 	text-decoration: none;
-	color: #242424;
+	color: var(--text-color);
 }
 
 /* content divs */
 nav {
-	/* width: 100%; */
 	height: auto;
 	z-index: 4;
 	height: 100%;
 	margin: 0 auto;
 	padding: 20px;
-	/* overflow: scroll; */
 	max-width: 750px;
 }
 main {
@@ -76,7 +77,7 @@ header a {
 #sign {
 	z-index: 5;
 	top: 0;
-	background: #fdfdfd;
+	background: var(--bg-color);
 	margin: 0 auto;
 	padding: 20px;
 	padding-top: 30px;
@@ -89,7 +90,7 @@ header a {
 nav a {
 	display: block;
 	font-size: 24px;
-	color: #242424;
+	color: var(--text-color);
 	line-height: normal;
 	letter-spacing: .9px;
 	margin-bottom: 1em;
@@ -150,7 +151,7 @@ article a {
 	text-decoration: underline;
 }
 article p {
-	color: #242424;
+	color: var(--text-color);
 	width: 100%;
 }
 
@@ -169,32 +170,28 @@ article p {
 	max-width: 750px;
 }
 .folio {
-	/* display: flex; */
+	display: block;
 	padding: 0 10px;
 	width: 90%;
+	position: relative;
+	height: 620px;
 }
 .folio .picture {
-	/* position: relative; */
-	scale: 100%;
+	position: absolute;
+	width: 600px;
+	height: auto;
 }
-.folio .one {
-	top: 0px;
+.folio .picture:nth-child(odd) {
 	left: 0px;
-	/* padding-right: 10px; */
+
 }
-.folio .two {
-	top: 8em;
-	right: 0px;
+.folio .picture:nth-child(even) {
+	left: 500px;
+	top: 270px;
 }
 .portfolio li {
 	margin-bottom: 2em;
 }
 .tombstone {
 	font-size: 22px;
-}
-.folio {
-	margin-bottom: 1em;
-}
-.folio > .picture {
-	margin: 0;
 }
