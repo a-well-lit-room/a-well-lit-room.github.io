@@ -19,6 +19,9 @@ h1 {
 	margin-bottom: 0;
 	max-width: 750px;
 }
+h2 {
+	font-weight: 500;
+}
 p, li {
 	font-size: 24px;
 	color: #242424;
@@ -151,27 +154,47 @@ article p {
 	width: 100%;
 }
 
-
-/* potentially outdated */
-
-/**a img {
-	border: none;
-}*/
-
-/** #nav .container {
+/* portfolio page */
+.portfolio {
 	width: 100%;
-	background: #fdfdfd;
-	overflow: scroll;
+	max-width: 850px;
 	margin: 0 auto;
-	padding-top: 0;
-} */
-
-/**#directory  {
+}
+.portfolio .text {
+	height: auto;
+	z-index: 4;
+	height: 100%;
+	margin: 0 auto;
+	padding: 20px;
 	max-width: 750px;
-	margin: 0 auto;
-	margin-bottom: 100px;
-}*/
-
-/**#tall {
-	max-height: 90vh;
-}*/
+}
+.folio {
+	/* display: flex; */
+	padding: 0 10px;
+	width: 90%;
+}
+.folio .picture {
+	/* position: relative; */
+	scale: 100%;
+}
+.folio .one {
+	top: 0px;
+	left: 0px;
+	/* padding-right: 10px; */
+}
+.folio .two {
+	top: 8em;
+	right: 0px;
+}
+.portfolio li {
+	margin-bottom: 2em;
+}
+.tombstone {
+	font-size: 22px;
+}
+.folio {
+	margin-bottom: 1em;
+}
+.folio > .picture {
+	margin: 0;
+}
