@@ -180,8 +180,8 @@ article p {
 }
 .portfolio .folio .picture {
 	/* position: absolute; */
-	width: 500px;
-	height: auto;
+	width: auto;
+	height: 284px;
 	margin: 0;
 	padding: 10px;
 }
@@ -208,6 +208,7 @@ article p {
 	.portfolio .folio .picture {
 		padding: 10px 0;
 		width: 100%;
+		height: auto;
 		max-width: var(--column-width);
 	}
 }
