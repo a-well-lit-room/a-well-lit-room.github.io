@@ -186,9 +186,9 @@ article p {
 	padding: 10px;
 }
 .portfolio li {
-	margin-bottom: 4em;
+	margin-bottom: 5em;
 }
-.tombstone {
+.tombstone, .sample {
 	font-size: 22px;
 	margin-bottom: 0;
 }
