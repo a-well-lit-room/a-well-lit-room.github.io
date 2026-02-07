@@ -4,6 +4,7 @@
 	--bg-color: #fdfdfd;
 	--text-color: #242424;
 	--main-font-size: 24px;
+	--column-width: 750px;
 }
 
 body {
@@ -25,7 +26,7 @@ h1, p, li {
 h1 {
 	margin: 0 auto;
 	margin-bottom: 0;
-	max-width: 750px;
+	max-width: var(--column-width);
 }
 h2 {
 	font-weight: 500;
@@ -49,7 +50,7 @@ nav {
 	height: 100%;
 	margin: 0 auto;
 	padding: 20px;
-	max-width: 750px;
+	max-width: var(--column-width);
 }
 main {
 	width: 100vw;
@@ -68,7 +69,7 @@ main .container {
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
-	max-width: 750px;
+	max-width: var(--column-width);
 }
 /* header and nav elements */
 header a {
@@ -85,7 +86,7 @@ header a {
 #sign p {
 	margin: 0 auto;
 	margin-bottom: 0;
-	max-width: 750px;
+	max-width: var(--column-width);
 }
 nav a {
 	display: block;
@@ -105,7 +106,7 @@ img {
 /* video */
 .video-container {
 	margin: 0 auto;
-	max-width: 750px;
+	max-width: var(--column-width);
 	padding: 0 20px 20px 20px;
 }
 .video-gallery {
@@ -134,7 +135,7 @@ iframe {
 /* "about" page */
 #bio .container {
 	margin: 0 auto;
-	max-width: 750px;
+	max-width: var(--column-width);
 	padding: 20px;
 	padding-top: 30px;
 }
@@ -157,7 +158,7 @@ article p {
 /* portfolio page */
 .portfolio {
 	/* width: 100%; */
-	max-width: 750px;
+	max-width: var(--column-width);
 	margin: 0 auto;
 	padding: 20px;
 }
@@ -207,6 +208,6 @@ article p {
 	.portfolio .folio .picture {
 		padding: 10px 0;
 		width: 100%;
-		max-width: 750px;
+		max-width: var(--column-width);
 	}
 }
