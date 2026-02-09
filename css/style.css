@@ -1,8 +1,8 @@
 /* css */
 
 :root {
-	--bg-color: #fdfdfd;
-	--text-color: #242424;
+	--light-color: #fdfdfd;
+	--dark-color: rgb(5, 5, 5);
 	--main-font-size: 24px;
 	--column-width: 750px;
 }
@@ -10,15 +10,40 @@
 body {
 	font-size: var(--main-font-size);
 	font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
-	background: var(--bg-color);
-	color: var(--text-color);
+	background: var(--light-color);
+	color: var(--dark-color);
 	line-height: 1.3em;
+}
+
+@media (prefers-color-scheme: light) {
+	a {
+		color: var(--dark-color);
+	}
+}
+
+/* dark theme */
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: var(--dark-color);
+		color: var(--light-color)
+	}
+
+	a {
+		color: var(--light-color)
+	}
+
+	.folio .picture {
+		border-style: dotted;
+		border-color: var(--light-color);
+		border-width: 2px;
+	}
 }
 
 /* text formatting */
 h1, p, li {
 	font-size: var(--main-font-size);
-	color: var(--text-color);
+	/* color: var(--dark-color); */
 	line-height: normal;
 	letter-spacing: .9px;
 	text-decoration: none;
@@ -34,13 +59,13 @@ h2 {
 p, li {
 	margin-bottom: 1em;
 }
-a:link {
+
+a:link, a:visited {
 	text-decoration: underline;
-	color: var(--text-color);
 }
-a:active, a:visited, a:hover {
+
+a:active, a:hover {
 	text-decoration: none;
-	color: var(--text-color);
 }
 
 /* content divs */
@@ -78,7 +103,6 @@ header a {
 #sign {
 	z-index: 5;
 	top: 0;
-	background: var(--bg-color);
 	margin: 0 auto;
 	padding: 20px;
 	padding-top: 30px;
@@ -91,7 +115,7 @@ header a {
 nav a {
 	display: block;
 	font-size: 24px;
-	color: var(--text-color);
+	/* color: var(--dark-color); */
 	line-height: normal;
 	letter-spacing: .9px;
 	margin-bottom: 1em;
@@ -151,7 +175,7 @@ article a {
 	text-decoration: underline;
 }
 article p {
-	color: var(--text-color);
+	/* color: var(--dark-color); */
 	width: 100%;
 }
 
@@ -173,7 +197,7 @@ article p {
 	justify-content: center;
 	flex-wrap: wrap;
 	padding: 1em;
-	width: calc(100% + 400px);
+	width: calc(100% + 404px);
 	left: -224px;
 	margin: 0 auto;
 	position: relative;
@@ -181,8 +205,8 @@ article p {
 .portfolio .folio .picture {
 	width: auto;
 	height: 310px;
-	margin: 0;
-	padding: 10px;
+	/* margin: 0; */
+	margin: 10px;
 }
 .portfolio li {
 	margin-bottom: 5em;
@@ -205,7 +229,7 @@ article p {
 		padding: 20px 0;
 	}
 	.portfolio .folio .picture {
-		padding: 10px 0;
+		margin: 10px 0;
 		width: 100%;
 		height: auto;
 		max-width: var(--column-width);
