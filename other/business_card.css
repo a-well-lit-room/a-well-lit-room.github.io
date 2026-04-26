@@ -1,0 +1,49 @@
+main {
+    max-width: 750px;
+    margin: 2em auto 0 auto;
+}
+
+img {
+    width: 60vw;
+    max-width: 400px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1.5em auto;
+}
+
+ul {
+    text-align: center;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    font-size: 20px;
+    line-height: 0.9em;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+@media (prefers-color-scheme: light) {
+    #portrait-dark-mode {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #portrait-light-mode {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+}
